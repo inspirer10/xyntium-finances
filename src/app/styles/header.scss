@@ -1,0 +1,84 @@
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    background-image: radial-gradient(circle closest-corner at 50% 0%, var(--green--opacity), rgba(255, 151, 91, 0));
+    background-repeat: no-repeat;
+    article {
+        width: 90%;
+        margin-top: 25vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .text-wrapper {
+            h1 {
+                font-size: 6rem;
+                font-weight: 600;
+                color: var(--white);
+                letter-spacing: -0.0375em;
+                line-height: 1.2;
+                width: 70%;
+                text-align: left;
+                span {
+                    background: -webkit-linear-gradient(0deg, var(--white), rgb(0, 255, 0));
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+            .subheading {
+                font-family: "Montserrat", sans-serif;
+                margin-top: 1.25rem;
+                font-size: 22px;
+                font-weight: 500;
+                color: var(--carbon);
+                width: 35%;
+                letter-spacing: -0.0125em;
+                text-align: left;
+                line-height: 1.5;
+            }
+        }
+    }
+    .buttons-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 1.25rem;
+        button {
+            margin-top: 3rem;
+            font-size: 20px;
+            font-weight: 500;
+            padding: 1rem 3rem;
+            background-color: black;
+            color: #FFF;
+            outline: none;
+            border: none;
+            border: 1px solid var(--green);
+            border-radius: 50px;
+            cursor: pointer;
+            will-change: transform;
+            transition: .25s ease;
+            &:hover {
+                background-color: var(--green);
+                color: var(--black);
+                transform: translateY(-3px);
+            }
+            &:nth-of-type(2) {
+                border: 1px solid var(--carbon);
+                background-color: var(--carbon);
+                color: var(--black);
+                &:hover {
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+    .we-work {
+        margin-top: 10vh;
+        font-size: 20px;
+        font-weight: 500;
+        color: var(--carbon);
+        letter-spacing: -0.015em;
+    }
+}

@@ -1,7 +1,16 @@
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Introduction from './components/Introduction';
+import Footer from './components/Footer';
+
 export default function Home() {
     return (
         <>
-            <h1>Xyntium</h1>
+            <Navbar />
+            <Header />
+            <Introduction />
+
+            <Footer />
         </>
     );
 }

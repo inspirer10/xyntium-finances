@@ -1,0 +1,112 @@
+.introduction_section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 12.5vh 0 15vh;
+    h2,
+    h3 {
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -0.0125em;
+    }
+    h3 {
+        color: rgb(115, 115, 115);
+    }
+    .cards_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+    .card {
+        width: 550px;
+        height: 325px;
+        border-radius: 24px;
+        border: 1px solid rgb(200, 200, 200);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(50, 255, 50, 0.7);
+        backdrop-filter: blur(5px);
+        position: relative;
+        transform: perspective(800px) rotateY(-10deg) rotateX(15deg) skewX(-10deg) skewY(10deg);
+        //transform: perspective(1100px) rotateY(-20deg) rotateX(25deg);
+        .logo {
+            position: absolute;
+            left: 12%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: -0.025em;
+        }
+        .owner {
+            position: absolute;
+            left: 12.5%;
+            bottom: 0%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--black);
+            letter-spacing: -0.025em;
+        }
+        .icon {
+            font-size: 4.25rem;
+            position: absolute;
+            right: 5%;
+            bottom: 0%;
+            color: var(--black);
+        }
+    }
+    .test-card {
+        width: 550px;
+        height: 325px;
+        border-radius: 24px;
+        border: 1px solid rgb(200, 200, 200);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.25);
+        background-color: var(--green-opacity);
+        backdrop-filter: blur(15px);
+        position: relative;
+        //transform-style: preserve-3d;
+        transform: perspective(800px) rotateY(-15deg) rotateX(5deg);
+        transform: perspective(800px) rotateY(30deg) rotateX(30deg);
+        background-image: radial-gradient(circle closest-corner at 50% 100%, var(--green--opacity), rgba(255, 151, 91, 0));
+        background-repeat: no-repeat;
+        transition: 3s ease;
+        &:hover {
+            background-repeat: no-repeat;
+        }
+        .logo {
+            position: absolute;
+            left: 12%;
+            top: 10%;
+            transform: translate(-50%, -50%);
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.025em;
+        }
+        .owner {
+            position: absolute;
+            left: 17.5%;
+            bottom: 0%;
+            transform: translate(-50%, -50%);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.025em;
+        }
+        .icon {
+            font-size: 4.25rem;
+            position: absolute;
+            right: 5%;
+            bottom: 0%;
+            color: var(--white);
+        }
+    }
+}
