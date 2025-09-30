@@ -7,6 +7,30 @@ function Header() {
         <header className='introduction'>
             <article>
                 <div className='text-wrapper'>
+                    <div className='overHeading'>
+                        <Image
+                            src='/image1.jpg'
+                            height={55}
+                            width={55}
+                            quality={90}
+                            alt=''
+                        />
+                        <Image
+                            src='/image2.jpg'
+                            height={50}
+                            width={55}
+                            quality={90}
+                            alt=''
+                        />
+                        <Image
+                            src='/image3.jpg'
+                            height={55}
+                            width={55}
+                            quality={90}
+                            alt=''
+                        />
+                        <p>Trusted by over 12k users</p>
+                    </div>
                     <h1>
                         Track & Manage your finaces with <span>ease</span>
                     </h1>
@@ -21,7 +45,7 @@ function Header() {
                     </div>
                 </div>
 
-                <Image src={'/globe.svg'} height={200} width={200} alt='xd' />
+                <Image src={'/globe.svg'} height={350} width={350} alt='xd' />
             </article>
 
             <p className='we-work'>We work with:</p>

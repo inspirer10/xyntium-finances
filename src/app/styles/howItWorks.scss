@@ -1,0 +1,22 @@
+.howItWorks_section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15vh 0;
+    h2,
+    h3 {
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.0125em;
+        background: -webkit-linear-gradient(0deg, var(--white) 40%, rgb(14, 14, 14));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    h3 {
+        color: rgb(115, 115, 115);
+        background: -webkit-linear-gradient(0deg, rgb(115, 115, 115), rgb(14, 14, 14));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

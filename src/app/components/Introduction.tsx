@@ -13,12 +13,22 @@ function Introduction() {
                     <p className='logo'>Xyntium</p>
                     <p className='owner'>Amy Castro</p>
                     <Icon icon='ri:visa-line' className='icon' />
+
+                    <Icon
+                        icon='streamline-logos:elastic-x-pack-logo-solid'
+                        className='logo_icon'
+                    />
                 </div>
 
                 <div className='test-card'>
                     <p className='logo'>Xyntium</p>
                     <p className='owner'>Johnny Herman</p>
                     <Icon icon='ri:visa-line' className='icon' />
+
+                    <Icon
+                        icon='streamline-logos:elastic-x-pack-logo-solid'
+                        className='logo_icon'
+                    />
                 </div>
             </main>
         </section>
