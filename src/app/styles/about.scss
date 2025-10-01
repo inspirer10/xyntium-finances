@@ -117,9 +117,9 @@
                     //outline: 2px solid rgba(255, 255, 255, 0.2);
                     background-image: radial-gradient(circle closest-corner at 50% 100%, var(--card-glow-1), var(--card-glow-2));
                     background-repeat: no-repeat;
-                    transition-property: --card-glow-1, --card-glow-2, background, transform, border-color, box-shadow;
-                    transition-delay: 0.04s;
-                    transition-duration: .275s;
+                    transition-property: --card-glow-1, --card-glow-2, background-color, transform, border-color, box-shadow;
+                    transition-delay: 0.05s;
+                    transition-duration: .3s;
                     transition-timing-function: ease;
                     &:hover {
                         --card-glow-1: var(--card-glow-1-hover);

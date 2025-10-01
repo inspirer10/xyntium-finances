@@ -7,18 +7,51 @@ function Footer() {
         <footer className='footer'>
             <h2>Xyntium</h2>
 
-            <main className='footer_main'>
-                <div className='socials-wrapper'>
-                    <Icon icon='mdi:facebook' className='icon' />
-                    <Icon icon='mdi:instagram' className='icon' />
-                    <Icon icon='mdi:linkedin' className='icon' />
+            <main className='footer-container'>
+                <div className='wrapper'>
+                    <p className='logo-wrapper'>
+                        <Icon
+                            icon='streamline-logos:elastic-x-pack-logo-solid'
+                            className='logo-icon'
+                        />
+                        <span>XYNTIUM</span>
+                    </p>
+
+                    <p className='address'>
+                        Level 8, 12 Sample St <br />
+                        Portland nsw 300, NY
+                    </p>
+
+                    <button>Get Started</button>
                 </div>
 
-                <div className='info-wrapper'>
-                    <p>Privacy Policy</p>
-                    <p>Terms of Service</p>
-                    <p>&copy; 2025 Xyntium Finance</p>
-                    <p>All rights reserved</p>
+                <div className='wrapper'>
+                    <h5>Company</h5>
+                    <p className='footer-link'>Home</p>
+                    <p className='footer-link'>About</p>
+                    <p className='footer-link'>Services</p>
+                    <p className='footer-link'>Contact</p>
+                </div>
+                <div className='wrapper'>
+                    <h5>Services</h5>
+                    <p className='footer-link'>Paid Ads</p>
+                    <p className='footer-link'>Brand Strategy</p>
+                    <p className='footer-link'>Card Design</p>
+                    <p className='footer-link'>Help</p>
+                </div>
+                <div className='wrapper'>
+                    <div className='media-wrapper'>
+                        <Icon icon='mdi:instagram' className='icon' />
+                        Instagram
+                    </div>
+                    <div className='media-wrapper'>
+                        <Icon icon='mdi:linkedin' className='icon' />
+                        LinkedIn
+                    </div>
+                    <div className='media-wrapper'>
+                        <Icon icon='mdi:youtube' className='icon' />
+                        YouTube
+                    </div>
                 </div>
             </main>
         </footer>

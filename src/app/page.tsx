@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import HowItWorks from './components/HowItWorks';
 import ChooseYourCard from './components/ChooseYourCard';
 import About from './components/About';
+import OurServices from './components/OurServices';
 
 export default function Home() {
     return (
@@ -14,6 +15,7 @@ export default function Home() {
             <About />
             <Introduction />
             <HowItWorks />
+            <OurServices />
             <ChooseYourCard />
 
             <Footer />

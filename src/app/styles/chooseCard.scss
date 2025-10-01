@@ -31,12 +31,30 @@
         background-color: var(--black);
         margin: 0.5rem auto;
         padding: 0.75rem 0;
-        width: 57.5%;
-        border-radius: 1.25rem;
+        width: 60%;
+        //border-radius: 1.25rem;
         display: flex;
         overflow-x: auto;
+        position: relative;
         &::-webkit-scrollbar {
             display: none;
+        }
+        &::before,
+        &::after {
+            content: "";
+            height: 100%;
+            pointer-events: none;
+            position: absolute;
+            top: 0%;
+            width: 10%;
+            z-index: 1;
+            background: linear-gradient(270deg, hsla(0, 0%, 100%, 0), rgb(11, 11, 11));
+            left: 0;
+        }
+        &::after {
+            background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), rgb(11, 11, 11));
+            right: 0;
+            left: unset;
         }
         .group {
             display: flex;

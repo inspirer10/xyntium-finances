@@ -1,0 +1,63 @@
+.ourServices_section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15vh 0;
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        margin-bottom: 2.5rem;
+        background: -webkit-linear-gradient(0deg, var(--white) 40%, rgb(11, 11, 11));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .cards_wrapper {
+        margin: 0 auto;
+        width: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2%;
+        .card {
+            position: relative;
+            background-color: rgb(15, 15, 15);
+            padding: 2rem 2rem;
+            width: 49%;
+            margin-bottom: 1.5%;
+            border: 1px solid rgb(64, 64, 64);
+            border-radius: 16px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 8px;
+            box-shadow: 0px 8px 12px 0px rgba(228, 228, 228, 0.025);
+            will-change: transform;
+            //outline: 2px solid rgba(255, 255, 255, 0.2);
+            transition-delay: 0.03s;
+            transition: .275s ease;
+            .icon {
+                font-size: 2.5rem;
+                color: var(--white);
+                margin-bottom: 0.75rem;
+            }
+            .heading {
+                font-size: 2rem;
+                color: var(--white);
+            }
+            .description {
+                font-family: "Montserrat", sans-serif;
+                font-size: 18px;
+                color: var(--carbon);
+            }
+            &:hover {
+                transform: translateY(-2px);
+                border-color: rgb(95, 95, 95);
+            }
+        }
+    }
+}
