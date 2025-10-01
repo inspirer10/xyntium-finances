@@ -19,9 +19,9 @@ function Navbar() {
                 XYNTIUM
             </p>
 
-            <ul>
-                <Link className='link' href='#top'>
-                    Home
+            <ul className={`${isScrolled ? 'scrolled' : ''}`}>
+                <Link className='link' href='#about'>
+                    About
                 </Link>
                 <Link className='link' href='#top'>
                     Why Xyntium?
@@ -29,15 +29,17 @@ function Navbar() {
                 <Link className='link' href='#howWorks'>
                     How it works
                 </Link>
-                <Link className='link' href='testimonials'>
+                <Link className='link' href='#testimonials'>
                     Testimonials
                 </Link>
-                <Link className='link' href='faq'>
+                <Link className='link' href='#faq'>
                     FAQ
                 </Link>
             </ul>
 
-            <button>Get Started!</button>
+            <button className={`button ${isScrolled ? 'scrolled' : ''}`}>
+                Get Started!
+            </button>
         </nav>
     );
 }

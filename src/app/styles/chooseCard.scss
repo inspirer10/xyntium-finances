@@ -1,0 +1,156 @@
+.chooseCard_section {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15vh 0;
+    h2,
+    h3 {
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        color: var(--white);
+        background: -webkit-linear-gradient(0deg, var(--white) 40%, rgb(14, 14, 14));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        span {
+            font-family: "Instrument Serif", serif;
+            font-style: italic;
+            font-weight: 700;
+        }
+    }
+    h3 {
+        color: rgb(115, 115, 115);
+        background: -webkit-linear-gradient(0deg, rgb(115, 115, 115), rgb(11, 11, 11));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .cards_carousel {
+        //background-color: var(--carbon);
+        background-color: var(--black);
+        margin: 0.5rem auto;
+        padding: 0.75rem 0;
+        width: 57.5%;
+        border-radius: 1.25rem;
+        display: flex;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+        .group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 0.25rem;
+            animation: spin 12s infinite linear forwards;
+            .card {
+                flex: 0 0 300px;
+                height: 175px;
+                border-radius: 16px;
+                margin-right: 1rem;
+                background-color: rgb(50, 255, 50);
+                position: relative;
+                will-change: transform;
+                border: 1px solid transparent;
+                transition-delay: 0.025s;
+                transition: .3s ease;
+                &:nth-of-type(2) {
+                    background-color: var(--black);
+                    border: 1px solid var(--white);
+                    .company_name,
+                    .visa_icon,
+                    .logo_icon {
+                        color: var(--white);
+                    }
+                }
+                &:nth-of-type(3) {
+                    background-color: var(--white);
+                }
+                &:nth-of-type(4) {
+                    background-color: darkblue;
+                    .company_name,
+                    .visa_icon,
+                    .logo_icon {
+                        color: var(--white);
+                    }
+                }
+                &:hover {
+                    transform: translateY(-4px);
+                    .logo_icon {
+                        transform: translate(-50%, -50%) scale(1.08);
+                    }
+                }
+                .company_name {
+                    font-family: "Montserrat", sans-serif;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: var(--black);
+                    letter-spacing: -0.05em;
+                    position: absolute;
+                    left: 15%;
+                    top: 11%;
+                    transform: translate(-50%, -50%);
+                    user-select: none;
+                }
+                .logo_icon {
+                    color: var(--black);
+                    font-size: 4rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    will-change: transform;
+                    transition-delay: 0.025s;
+                    transition: .3s ease;
+                }
+                .visa_icon {
+                    font-size: 2.25rem;
+                    position: absolute;
+                    right: 3%;
+                    bottom: -2.5%;
+                    color: var(--black);
+                }
+            }
+        }
+    }
+    button {
+        font-family: "Montserrat", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: -0.035em;
+        padding: 1rem 1.75rem;
+        margin: 2.5rem auto 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 6px;
+        background-color: var(--black);
+        color: var(--white);
+        outline: none;
+        border: 1px solid var(--green);
+        border-radius: 50px;
+        cursor: pointer;
+        will-change: transform;
+        transition-delay: 0.025s;
+        transition: .275s ease;
+        &:hover {
+            background-color: var(--green);
+            color: var(--black);
+            transform: translateY(-3px);
+        }
+        .icon {
+            font-size: 24px;
+            transform: translateY(-1px);
+        }
+    }
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%;
+    }
+}

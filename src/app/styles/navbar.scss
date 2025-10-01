@@ -1,12 +1,12 @@
 .navbar {
-    width: 72.5%;
+    width: 92.5%;
     position: fixed;
     z-index: 1000;
     top: 2.5rem;
     left: 50%;
     transform: translate(-50%, -50%);
     border: 1px solid rgba(252, 252, 252, 0.625);
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 0.5rem 1.75rem;
     padding-right: 0.75rem;
     background-color: rgba(0, 0, 0, 0.775);
@@ -17,7 +17,8 @@
     transition: .225s ease;
     &.scrolled {
         transition: .4s ease;
-        border-color: rgba(252, 252, 252, 0.225);
+        border-radius: 50px;
+        border-color: rgba(252, 252, 252, 0.25);
         width: 60%;
     }
     &:hover {
@@ -49,7 +50,12 @@
         display: flex;
         flex-direction: row;
         list-style: none;
-        gap: 0.75rem;
+        gap: 2rem;
+        transition: .175s ease;
+        &.scrolled {
+            transition: .4s ease;
+            gap: 0.75rem;
+        }
         .link {
             font-family: "Montserrat", sans-serif;
             font-size: 18px;
@@ -85,15 +91,19 @@
         color: var(--black);
         border: none;
         outline: none;
-        border-radius: 50px;
+        border-radius: 10px;
         padding: 0.75rem 1.5rem;
         background-color: var(--green);
         text-wrap: nowrap;
         transition-delay: 0.025s;
-        transition: .25s ease-out;
+        transition: .225s ease;
         cursor: pointer;
         &:hover {
             background-color: var(--carbon);
+        }
+        &.scrolled {
+            transition: .4s ease;
+            border-radius: 50px;
         }
     }
 }
