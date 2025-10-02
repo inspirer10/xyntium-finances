@@ -12,6 +12,12 @@
     initial-value: rgba(110, 255, 91, 0);
 }
 
+@property --black-card-glow {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: rgba(0, 30, 0, 0.1);
+}
+
 :root {
     --white: rgb(252, 252, 252);
     --black: rgb(11, 11, 11);
@@ -23,6 +29,7 @@
     --card-glow-2-hover: rgba(110, 255, 91, 0);
     --green: rgb(96, 229, 80);
     --green-dark: rgb(7, 75, 0);
+    --black-card-glow: rgba(0, 30, 0, 0.1);
     //rgb(50, 205, 50)
 }
 
@@ -51,6 +58,8 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: var(--green);
+    color: var(--white);
     &::selection {
         background-color: var(--green);
         color: var(--black);

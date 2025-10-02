@@ -6,6 +6,7 @@ import HowItWorks from './components/HowItWorks';
 import ChooseYourCard from './components/ChooseYourCard';
 import About from './components/About';
 import OurServices from './components/OurServices';
+import Blockchain from './components/Blockchain';
 
 export default function Home() {
     return (
@@ -16,6 +17,7 @@ export default function Home() {
             <Introduction />
             <HowItWorks />
             <OurServices />
+            <Blockchain />
             <ChooseYourCard />
 
             <Footer />

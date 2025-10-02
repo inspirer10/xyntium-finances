@@ -1,7 +1,7 @@
 footer {
     width: 100%;
-    padding: 12.5rem 0 0rem;
-    background: linear-gradient(170deg, rgba(10, 10, 10, 1.000) 0.000%, rgba(10, 10, 10, 1.000) 50.000%, rgba(50, 255, 50, 0.1) 100.000%);
+    padding: 10vh 0 0rem;
+    background: linear-gradient(170deg, rgba(11, 11, 11, 1.000) 0.000%, rgba(11, 11, 11, 1.000) 50.000%, rgba(50, 255, 50, 0.1) 100.000%);
     h2 {
         // font-family: "Montserrat", sans-serif;
         font-size: 23vw;
@@ -90,7 +90,7 @@ footer {
                 background-color: rgba(11, 11, 11, 0.1);
                 backdrop-filter: blur(5px);
                 color: rgb(225, 225, 225);
-                border-radius: 16px;
+                border-radius: 14px;
                 border: 1px solid rgb(75, 75, 75);
                 padding: 18px 2rem;
                 font-size: 18px;
@@ -117,7 +117,7 @@ footer {
             button {
                 background-color: transparent;
                 color: #fff;
-                border-radius: 16px;
+                border-radius: 14px;
                 border: 1px solid rgb(95, 95, 95);
                 font-family: "Raleway", sans-serif;
                 padding: 16px 1.75rem;

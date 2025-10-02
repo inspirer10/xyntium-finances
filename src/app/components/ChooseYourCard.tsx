@@ -6,7 +6,7 @@ function ChooseYourCard() {
     return (
         <section className='chooseCard_section'>
             <h2>
-                Join & Choose Your <span>Card</span>
+                Join, Choose Your <span>Unique Card</span>
             </h2>
             <div className='cards_carousel'>
                 <div className='group'>
@@ -42,8 +42,24 @@ function ChooseYourCard() {
                         />
                         <Icon icon='ri:visa-line' className='visa_icon' />
                     </div>
+                    <div className='card'>
+                        <p className='company_name'>Xyntium</p>
+                        <Icon
+                            icon='streamline-logos:elastic-x-pack-logo-solid'
+                            className='logo_icon'
+                        />
+                        <Icon icon='ri:visa-line' className='visa_icon' />
+                    </div>
                 </div>
                 <div className='group' aria-hidden='true'>
+                    <div className='card'>
+                        <p className='company_name'>Xyntium</p>
+                        <Icon
+                            icon='streamline-logos:elastic-x-pack-logo-solid'
+                            className='logo_icon'
+                        />
+                        <Icon icon='ri:visa-line' className='visa_icon' />
+                    </div>
                     <div className='card'>
                         <p className='company_name'>Xyntium</p>
                         <Icon

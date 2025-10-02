@@ -25,25 +25,61 @@
         .card {
             position: relative;
             background-color: rgb(15, 15, 15);
-            padding: 2rem 2rem;
+            padding: 2.25rem 2rem;
             width: 49%;
             margin-bottom: 1.5%;
-            border: 1px solid rgb(64, 64, 64);
+            border: 1px solid rgb(45, 45, 45);
             border-radius: 16px;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
             flex-direction: column;
-            gap: 8px;
+            gap: 4px;
             box-shadow: 0px 8px 12px 0px rgba(228, 228, 228, 0.025);
-            will-change: transform;
-            //outline: 2px solid rgba(255, 255, 255, 0.2);
-            transition-delay: 0.03s;
-            transition: .275s ease;
-            .icon {
-                font-size: 2.5rem;
-                color: var(--white);
-                margin-bottom: 0.75rem;
+            will-change: transform, background-image;
+            background-image: radial-gradient(circle closest-corner at 50% 100%, var(--black-card-glow), var(--card-glow-2));
+            background-repeat: no-repeat;
+            transition-property: --black-card-glow, --card-glow-2, background-color, transform, border-color, box-shadow;
+            transition-delay: 0.025s;
+            transition-duration: .325s;
+            transition-timing-function: ease;
+            &:hover {
+                --black-card-glow: var(--card-glow-1);
+                --card-glow-2: var(--card-glow-2-hover);
+                background-color: rgb(18, 18, 18);
+                border-color: rgb(100, 100, 100);
+                transform: translateY(-2px);
+                box-shadow: 0px 8px 12px 0px rgba(228, 228, 228, 0.05);
+                .icon_wrapper {
+                    .icon_background {
+                        background-color: transparent;
+                    }
+                }
+                .description {
+                    color: var(--white);
+                }
+            }
+            .icon_wrapper {
+                position: relative;
+                .icon {
+                    color: var(--green);
+                    font-size: 2.75rem;
+                    margin-bottom: 1rem;
+                    z-index: 5;
+                }
+                .icon_background {
+                    position: absolute;
+                    top: 55%;
+                    left: 70%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                    background-color: rgb(28, 28, 28);
+                    height: 3rem;
+                    width: 3rem;
+                    border-radius: 18px;
+                    transition-delay: 0.025s;
+                    transition: .325s ease;
+                }
             }
             .heading {
                 font-size: 2rem;
@@ -53,10 +89,8 @@
                 font-family: "Montserrat", sans-serif;
                 font-size: 18px;
                 color: var(--carbon);
-            }
-            &:hover {
-                transform: translateY(-2px);
-                border-color: rgb(95, 95, 95);
+                transition-delay: 0.025s;
+                transition: .325s ease;
             }
         }
     }

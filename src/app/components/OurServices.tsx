@@ -68,7 +68,11 @@ function OurServices() {
             <main className='cards_wrapper'>
                 {cardsData.map(({ text, heading, icon, id }) => (
                     <div className='card' key={id}>
-                        <Icon icon={icon} className='icon' />
+                        <div className='icon_wrapper'>
+                            <Icon icon={icon} className='icon' />
+                            <div className='icon_background' />
+                        </div>
+
                         <h5 className='heading'>{heading}</h5>
                         <p className='description'>{text}</p>
                     </div>

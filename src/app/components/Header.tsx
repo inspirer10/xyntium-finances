@@ -32,7 +32,7 @@ function Header() {
                         <p>Trusted by over 12k users</p>
                     </div>
                     <h1>
-                        Track & Manage your finaces with <span>ease</span>
+                        Track & Manage your finances with <span>ease</span>
                     </h1>
                     <p className='subheading'>
                         Transfer money globally in multiple curriencies - fast,
@@ -41,14 +41,14 @@ function Header() {
 
                     <div className='buttons-wrapper'>
                         <button>Try Xyntium for free</button>
-                        <button>Book a demo</button>
+                        <button>Book a Demo</button>
                     </div>
                 </div>
 
                 <Image src={'/globe.svg'} height={350} width={350} alt='xd' />
             </article>
 
-            <p className='we-work'>We work with:</p>
+            <p className='we-work'>Partners and collaborations</p>
             <div></div>
         </header>
     );
