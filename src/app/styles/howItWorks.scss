@@ -10,22 +10,15 @@
         line-height: 1.2;
         letter-spacing: -0.0125em;
         background: -webkit-linear-gradient(0deg, var(--white) 40%, rgb(14, 14, 14));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     h3 {
         color: rgb(115, 115, 115);
         background: -webkit-linear-gradient(0deg, rgb(115, 115, 115), rgb(14, 14, 14));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-    }
-    h2 {
-        //font-family: "Montserrat", sans-serif;  +H3 też ten font
-        span {
-            font-family: "Libertinus Serif", serif;
-            font-family: "Playfair Display", serif;
-            font-family: "Instrument Serif", serif;
-            font-style: italic;
-        }
     }
 }

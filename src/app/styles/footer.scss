@@ -10,6 +10,7 @@ footer {
         text-align: center;
         color: rgba(50, 205, 50, 0.1);
         background: -webkit-linear-gradient(0deg, rgba(50, 205, 50, 0.1), rgba(50, 205, 50, 0.01));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         user-select: none;

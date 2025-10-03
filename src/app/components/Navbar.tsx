@@ -4,37 +4,72 @@ import React from 'react';
 import '../styles/navbar.scss';
 import { Icon } from '@iconify/react';
 import { useScrolled } from './hooks/useScrolled';
-import Link from 'next/link';
 
 function Navbar() {
     const isScrolled = useScrolled(100);
 
+    const handleSectionRouting = (
+        e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+        section: string
+    ) => {
+        e.preventDefault();
+
+        // Jeśli jesteśmy na stronie głównej, przewiń do sekcji
+        document
+            .getElementById(`${section}`)
+            ?.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            <p className={`logo ${isScrolled ? 'scrolled' : ''}`}>
+            <a
+                className={`logo ${isScrolled ? 'scrolled' : ''}`}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
                 <Icon
                     icon='streamline-logos:elastic-x-pack-logo-solid'
                     className='icon'
                 />
                 XYNTIUM
-            </p>
+            </a>
 
             <ul className={`${isScrolled ? 'scrolled' : ''}`}>
-                <Link className='link' href='#about'>
+                <a
+                    className='link'
+                    href='#about'
+                    onClick={(e) => handleSectionRouting(e, 'about')}
+                >
                     About
-                </Link>
-                <Link className='link' href='#top'>
+                </a>
+
+                <a
+                    className='link'
+                    href='#whyXyntium'
+                    onClick={(e) => handleSectionRouting(e, 'whyXyntium')}
+                >
                     Why Xyntium?
-                </Link>
-                <Link className='link' href='#howWorks'>
+                </a>
+                <a
+                    className='link'
+                    href='#howWorks'
+                    onClick={(e) => handleSectionRouting(e, 'howWorks')}
+                >
                     How it works
-                </Link>
-                <Link className='link' href='#testimonials'>
+                </a>
+                <a
+                    className='link'
+                    href='#testimonials'
+                    onClick={(e) => handleSectionRouting(e, 'testimonials')}
+                >
                     Testimonials
-                </Link>
-                <Link className='link' href='#faq'>
+                </a>
+                <a
+                    className='link'
+                    href='#faq'
+                    onClick={(e) => handleSectionRouting(e, 'faq')}
+                >
                     FAQ
-                </Link>
+                </a>
             </ul>
 
             <button className={`button ${isScrolled ? 'scrolled' : ''}`}>

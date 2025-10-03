@@ -67,7 +67,9 @@ function Faq() {
                                 className='question'
                                 onClick={() => setOpenId(isOpen ? null : id)}
                             >
-                                <span className='q-text'>{question}</span>
+                                <span className='question_text'>
+                                    {question}
+                                </span>
                                 <Icon
                                     icon={isOpen ? 'mdi:minus' : 'mdi:plus'}
                                     className='icon'

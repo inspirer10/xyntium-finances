@@ -1,12 +1,42 @@
 import React from 'react';
 import '../styles/header.scss';
 import Image from 'next/image';
+import LightRays from './LightRays';
 
 //* https://reactbits.dev/backgrounds/light-rays
 
 function Header() {
     return (
         <header className='introduction'>
+            <div
+                style={{ width: '100%', height: '100vh', position: 'relative' }}
+            >
+                <LightRays
+                    /* raysOrigin='top-center'
+                    raysColor='#9eff9d'
+                    raysSpeed={1.5}
+                    lightSpread={0.8}
+                    rayLength={1.2}
+                    followMouse={true}
+                    mouseInfluence={0.1}
+                    noiseAmount={0.1}
+                    distortion={0.05}
+                    className='custom-rays' */
+
+                    raysOrigin='top-center'
+                    raysColor='#9eff9d'
+                    raysSpeed={1}
+                    lightSpread={1}
+                    rayLength={1.25}
+                    followMouse={true}
+                    fadeDistance={1}
+                    saturation={1}
+                    mouseInfluence={0.1}
+                    noiseAmount={0}
+                    distortion={0}
+                    className='custom-rays'
+                />
+            </div>
             <article>
                 <div className='text-wrapper'>
                     <div className='overHeading'>
