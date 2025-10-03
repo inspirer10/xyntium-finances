@@ -2,4 +2,101 @@
     width: 90%;
     margin: 0 auto;
     padding: 15vh 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    min-height: 100vh;
+    h2 {
+        font-size: 3.75rem;
+        font-weight: 600;
+        line-height: 1.2;
+        letter-spacing: -0.015em;
+        background: -webkit-linear-gradient(0deg, var(--white) 40%, rgb(14, 14, 14));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        position: sticky;
+        top: 5vh;
+        align-self: flex-start;
+        width: 35%;
+    }
+    aside {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        .item {
+            background: var(--black);
+            border: 1px solid rgb(75, 75, 75);
+            border-radius: 16px;
+            margin-bottom: 8px;
+            transition: 0.3s ease;
+            &:hover {
+                background-color: rgb(17, 17, 17);
+                .question {
+                    color: var(--white);
+                }
+            }
+            .question {
+                border-radius: 16px;
+                position: relative;
+                z-index: 2;
+                font-size: 18px;
+                font-weight: 600;
+                letter-spacing: 0.005em;
+                line-height: 1;
+                color: var(--carbon);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 18px 18px 18px 22px;
+                transition: 0.3s ease;
+                cursor: pointer;
+                .q-text {
+                    margin: 0;
+                }
+                .icon {
+                    color: var(--white);
+                    font-size: 26px;
+                    border-radius: 50px;
+                    transition: 0.3s ease;
+                }
+            }
+            .answer {
+                font-family: "Montserrat", sans-serif;
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 1.5;
+                text-align: justify;
+                overflow: hidden;
+                margin: 0 auto;
+                padding: 0 5% 0 22px;
+                opacity: 0;
+                height: 0;
+                max-height: 0;
+                transition: 0.275s ease;
+            }
+            &.active {
+                background: var(--white);
+                .question {
+                    color: var(--black);
+                    .icon {
+                        background-color: var(--black);
+                        color: var(--white);
+                    }
+                }
+                .answer {
+                    transition: 0.325s ease;
+                    color: rgb(75, 75, 75);
+                    padding: 16px 5% 20px 22px;
+                    height: auto;
+                    max-height: 100%;
+                    opacity: 1;
+                }
+            }
+            &:active,
+            &:focus {
+                border-color: var(--green);
+                transition: 0s ease;
+            }
+        }
+    }
 }

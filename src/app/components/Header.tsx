@@ -2,6 +2,8 @@ import React from 'react';
 import '../styles/header.scss';
 import Image from 'next/image';
 
+//* https://reactbits.dev/backgrounds/light-rays
+
 function Header() {
     return (
         <header className='introduction'>

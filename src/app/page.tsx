@@ -7,6 +7,7 @@ import ChooseYourCard from './components/ChooseYourCard';
 import About from './components/About';
 import OurServices from './components/OurServices';
 import Blockchain from './components/Blockchain';
+import Faq from './components/Faq';
 
 export default function Home() {
     return (
@@ -19,6 +20,8 @@ export default function Home() {
             <OurServices />
             <Blockchain />
             <ChooseYourCard />
+
+            <Faq />
 
             <Footer />
         </>
