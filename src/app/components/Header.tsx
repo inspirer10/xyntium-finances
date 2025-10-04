@@ -24,14 +24,14 @@ function Header() {
                     className='custom-rays' */
 
                     raysOrigin='top-center'
-                    raysColor='#9eff9d'
+                    raysColor='#53a253'
                     raysSpeed={1}
-                    lightSpread={1}
+                    lightSpread={0.75}
                     rayLength={1.25}
                     followMouse={true}
                     fadeDistance={1}
-                    saturation={1}
-                    mouseInfluence={0.1}
+                    saturation={0}
+                    mouseInfluence={0.075}
                     noiseAmount={0}
                     distortion={0}
                     className='custom-rays'

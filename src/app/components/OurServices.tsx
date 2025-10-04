@@ -62,8 +62,9 @@ const cardsData: CardData[] = [
 
 function OurServices() {
     return (
-        <section className='ourServices_section'>
-            <h2>Our Services:</h2>
+        <section className='ourServices_section' id='services'>
+            <h2>Our Services</h2>
+            <h3>That we are proud of</h3>
 
             <main className='cards_wrapper'>
                 {cardsData.map(({ text, heading, icon, id }) => (

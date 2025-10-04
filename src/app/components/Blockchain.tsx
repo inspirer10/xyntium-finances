@@ -125,15 +125,15 @@ function Blockchain() {
                         <h6 className='label'>
                             Buy, invest & store your money
                         </h6>
-                        <p>
+                        <p className='reason'>
                             <Icon icon='stash:light-bulb' className='icon' />
                             Keep your money secure
                         </p>
-                        <p>
+                        <p className='reason'>
                             <Icon icon='stash:light-bulb' className='icon' />
                             Send money to your wallet
                         </p>
-                        <p>
+                        <p className='reason'>
                             <Icon icon='stash:light-bulb' className='icon' />
                             Buy crypto currencies
                         </p>

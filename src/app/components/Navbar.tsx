@@ -58,10 +58,10 @@ function Navbar() {
                 </a>
                 <a
                     className='link'
-                    href='#testimonials'
-                    onClick={(e) => handleSectionRouting(e, 'testimonials')}
+                    href='#services'
+                    onClick={(e) => handleSectionRouting(e, 'services')}
                 >
-                    Testimonials
+                    Services
                 </a>
                 <a
                     className='link'

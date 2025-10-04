@@ -1,7 +1,7 @@
 .introduction_section {
     width: 90%;
     margin: 0 auto;
-    padding: 12.5vh 0 15vh;
+    padding: 11vh 0 15vh;
     h2,
     h3 {
         text-align: center;
@@ -9,121 +9,216 @@
         font-weight: 600;
         line-height: 1.1;
         letter-spacing: -0.0125em;
+        width: fit-content;
+        margin: 0 auto;
         color: var(--green);
     }
     h3 {
-        color: rgb(115, 115, 115);
+        color: rgb(135, 135, 135);
+        background: -webkit-linear-gradient(0deg, var(--white), rgb(40, 40, 40));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     .cards_container {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 3rem;
-    }
-    .card {
-        width: 550px;
-        height: 325px;
-        border-radius: 24px;
-        border: 1px solid rgb(200, 200, 200);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(50, 255, 50, 0.7);
-        backdrop-filter: blur(5px);
-        position: relative;
-        transform: perspective(800px) rotateY(-10deg) rotateX(15deg) skewX(-10deg) skewY(10deg);
-        //transform: perspective(1100px) rotateY(-20deg) rotateX(25deg);
-        .logo {
-            position: absolute;
-            left: 12%;
-            top: 10%;
-            transform: translate(-50%, -50%);
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--black);
-            letter-spacing: -0.025em;
+        margin-top: 2rem;
+        .card {
+            width: 550px;
+            height: 325px;
+            border-radius: 24px;
+            border: 1px solid rgb(200, 200, 200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(50, 255, 50, 0.7);
+            backdrop-filter: blur(5px);
+            position: relative;
+            transform: perspective(800px) rotateY(-10deg) rotateX(15deg) skewX(-10deg) skewY(10deg);
+            //transform: perspective(1100px) rotateY(-20deg) rotateX(25deg);
+            //transition: .275s ease;
+            animation: moveCard 6s infinite alternate ease-in-out;
+            &:hover {
+                //transition: .35s ease;
+                //transform: perspective(850px) rotateY(-5deg) rotateX(10deg) skewX(-10deg) skewY(10deg);
+            }
+            .logo {
+                position: absolute;
+                left: 12%;
+                top: 10%;
+                transform: translate(-50%, -50%);
+                font-size: 26px;
+                font-weight: 700;
+                color: var(--black);
+                letter-spacing: -0.025em;
+            }
+            .owner {
+                position: absolute;
+                left: 12.5%;
+                bottom: 0%;
+                transform: translate(-50%, -50%);
+                font-size: 22px;
+                font-weight: 700;
+                color: var(--black);
+                letter-spacing: -0.025em;
+            }
+            .icon {
+                font-size: 4.25rem;
+                position: absolute;
+                right: 5%;
+                bottom: 0%;
+                color: var(--black);
+            }
+            .logo_icon {
+                color: var(--black);
+                font-size: 7.5rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
-        .owner {
-            position: absolute;
-            left: 12.5%;
-            bottom: 0%;
-            transform: translate(-50%, -50%);
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--black);
-            letter-spacing: -0.025em;
-        }
-        .icon {
-            font-size: 4.25rem;
-            position: absolute;
-            right: 5%;
-            bottom: 0%;
-            color: var(--black);
-        }
-        .logo_icon {
-            color: var(--black);
-            font-size: 7.5rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    }
-    .test-card {
-        width: 550px;
-        height: 325px;
-        border-radius: 24px;
-        border: 1px solid rgb(200, 200, 200);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.25);
-        background-color: var(--green-opacity);
-        backdrop-filter: blur(15px);
-        position: relative;
-        //transform-style: preserve-3d;
-        transform: perspective(800px) rotateY(-15deg) rotateX(5deg);
-        transform: perspective(800px) rotateY(30deg) rotateX(30deg);
-        background-image: radial-gradient(circle closest-corner at 50% 100%, var(--green--opacity), rgba(255, 151, 91, 0));
-        background-repeat: no-repeat;
-        transition: 3s ease;
-        &:hover {
+        .second-card {
+            width: 550px;
+            height: 325px;
+            border-radius: 24px;
+            border: 1px solid rgb(200, 200, 200);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.25);
+            background-color: var(--green-opacity);
+            backdrop-filter: blur(15px);
+            position: relative;
+            //transform-style: preserve-3d;
+            transform: perspective(800px) rotateY(-15deg) rotateX(5deg);
+            transform: perspective(800px) rotateY(30deg) rotateX(30deg);
+            background-image: radial-gradient(circle closest-corner at 50% 100%, var(--green--opacity), rgba(255, 151, 91, 0));
             background-repeat: no-repeat;
+            //transition: .275s ease;
+            animation: moveSecondCard 6s infinite alternate ease-in-out;
+            &:hover {
+                //transition: .35s ease;
+                //transform: perspective(850px) rotateY(25deg) rotateX(25deg);
+            }
+            .logo {
+                position: absolute;
+                left: 12%;
+                top: 10%;
+                transform: translate(-50%, -50%);
+                font-size: 26px;
+                font-weight: 700;
+                color: var(--white);
+                letter-spacing: -0.025em;
+            }
+            .owner {
+                position: absolute;
+                left: 17.5%;
+                bottom: 0%;
+                transform: translate(-50%, -50%);
+                font-size: 22px;
+                font-weight: 700;
+                color: var(--carbon);
+                letter-spacing: -0.025em;
+            }
+            .icon {
+                font-size: 4.25rem;
+                position: absolute;
+                right: 5%;
+                bottom: 0%;
+                color: var(--white);
+            }
+            .logo_icon {
+                color: var(--carbon);
+                font-size: 7.5rem;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
         }
-        .logo {
-            position: absolute;
-            left: 12%;
-            top: 10%;
-            transform: translate(-50%, -50%);
-            font-size: 26px;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.025em;
+    }
+    .cards_wrapper {
+        width: 80%;
+        margin: 17.5vh auto 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch;
+        .card_item {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            transition-delay: 0.025s;
+            transition: .275s ease;
+            &:hover {
+                transform: translateY(-5px);
+                .icon_wrapper {
+                    background-color: var(--white);
+                    .icon {
+                        color: var(--black);
+                    }
+                }
+                .description {
+                    color: var(--white);
+                }
+            }
+            .icon_wrapper {
+                height: 4.25rem;
+                width: 4.25rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--green);
+                margin-bottom: 1rem;
+                border-radius: 14px;
+                transition-delay: 0.025s;
+                transition: .275s ease;
+                .icon {
+                    color: var(--black);
+                    font-size: 3rem;
+                    transition-delay: 0.025s;
+                    transition: .275s ease;
+                }
+            }
+            .title {
+                font-size: 26px;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 1.5rem;
+            }
+            .description {
+                font-family: "Montserrat", sans-serif;
+                font-size: 18px;
+                font-weight: 500;
+                text-align: center;
+                color: var(--carbon);
+                line-height: 1.4;
+                width: 90%;
+                transition: .3s ease;
+            }
         }
-        .owner {
-            position: absolute;
-            left: 17.5%;
-            bottom: 0%;
-            transform: translate(-50%, -50%);
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--carbon);
-            letter-spacing: -0.025em;
-        }
-        .icon {
-            font-size: 4.25rem;
-            position: absolute;
-            right: 5%;
-            bottom: 0%;
-            color: var(--white);
-        }
-        .logo_icon {
-            color: var(--carbon);
-            font-size: 7.5rem;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+    }
+}
+
+@keyframes moveCard {
+    0% {
+        transform: perspective(800px) rotateY(-10deg) rotateX(15deg) skewX(-10deg) skewY(10deg);
+    }
+    100% {
+        transform: perspective(850px) rotateY(-5deg) rotateX(10deg) skewX(-10deg) skewY(10deg);
+    }
+}
+
+@keyframes moveSecondCard {
+    0% {
+        transform: perspective(800px) rotateY(30deg) rotateX(30deg);
+    }
+    100% {
+        transform: perspective(850px) rotateY(25deg) rotateX(25deg);
     }
 }

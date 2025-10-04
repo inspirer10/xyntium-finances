@@ -1,21 +1,27 @@
 .ourServices_section {
     width: 90%;
     margin: 0 auto;
-    padding: 15vh 0;
-    h2 {
+    padding: 15vh 0 2.5vh;
+    h2,
+    h3 {
         font-family: "Montserrat", sans-serif;
         text-align: center;
         font-size: 4rem;
         font-weight: 600;
-        line-height: 1.2;
+        line-height: 1;
         letter-spacing: -0.025em;
-        margin-bottom: 2.5rem;
-        background: -webkit-linear-gradient(0deg, var(--white) 40%, rgb(11, 11, 11));
+        color: var(--green);
+        width: fit-content;
+        margin: 0 auto;
+    }
+    h3 {
+        background: -webkit-linear-gradient(0deg, var(--white) 0, rgb(32, 32, 32));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     .cards_wrapper {
-        margin: 0 auto;
+        margin: 3.25rem auto 0;
         width: 60%;
         display: flex;
         align-items: center;
@@ -72,7 +78,7 @@
                     left: 70%;
                     transform: translate(-50%, -50%);
                     z-index: -1;
-                    background-color: rgb(28, 28, 28);
+                    background-color: rgb(25, 25, 25);
                     height: 3rem;
                     width: 3rem;
                     border-radius: 18px;

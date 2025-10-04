@@ -24,26 +24,28 @@
         letter-spacing: -0.04em;
         text-align: center;
         margin-top: 0.75rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
     h2 {
-        font-size: 4rem;
+        font-size: 4.25rem;
         font-weight: 600;
-        line-height: 1.15;
+        line-height: 1.175;
         letter-spacing: -0.025em;
         text-align: center;
         background: -webkit-linear-gradient(0deg, var(--white) 40%, var(--black));
+        background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         span {
             background: -webkit-linear-gradient(75deg, var(--lime), var(--white));
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     }
     main {
         width: 70%;
-        margin: 5vh auto;
+        margin: 7.5vh auto 0;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -54,7 +56,8 @@
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            gap: 2.5vw;
+            //gap: 2.5vw;
+            width: 87.5%;
             .card {
                 width: 550px;
                 height: 325px;
@@ -86,7 +89,7 @@
                     line-height: 1.1;
                     color: var(--black);
                     letter-spacing: -0.04em;
-                    width: 45%;
+                    width: 40%;
                 }
                 .visa_icon {
                     font-size: 4.25rem;
@@ -154,11 +157,11 @@
             }
         }
         .bottom_wrapper {
+            width: 87.5%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
-            gap: 5vw;
             aside {
                 display: flex;
                 flex-direction: column;
@@ -176,7 +179,7 @@
                     letter-spacing: -0.025em;
                     margin: 0.75rem 0 1.25rem;
                 }
-                p {
+                .reason {
                     font-size: 18px;
                     font-weight: 500;
                     color: var(--carbon);
@@ -189,14 +192,19 @@
                     will-change: transform;
                     cursor: pointer;
                     transition-delay: 0.025s;
-                    transition: .3s ease;
+                    transition: .22s ease;
                     .icon {
                         font-size: 20px;
                         color: var(--lime);
+                        transition-delay: 0.025s;
+                        transition: .22s ease;
                     }
                     &:hover {
                         color: var(--white);
-                        transform: translateX(1.25px);
+                        transform: translateX(2.5px);
+                        .icon {
+                            transform: translateX(-2.5px);
+                        }
                     }
                 }
             }
@@ -204,7 +212,7 @@
                 width: 550px;
                 height: 325px;
                 border-radius: 24px;
-                border: 1px solid rgb(100, 100, 100);
+                border: 1px solid rgb(50, 50, 50);
                 display: flex;
                 align-items: flex-end;
                 padding: 1rem 1.25rem;
