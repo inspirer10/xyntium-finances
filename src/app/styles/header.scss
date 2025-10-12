@@ -27,14 +27,27 @@
                 img {
                     object-fit: cover;
                     border-radius: 50%;
-                    height: 55px;
-                    width: 55px;
+                    height: 50px;
+                    width: 50px;
                     border: 2px solid var(--green);
+                    transition: transform .325s ease;
+                    z-index: 5;
                     &:nth-of-type(2) {
+                        z-index: 10;
                         transform: translateX(-22.5%);
+                        &:hover {
+                            transform: translate(-22.5%, -12%);
+                        }
                     }
                     &:nth-of-type(3) {
+                        z-index: 15;
                         transform: translateX(-45%);
+                        &:hover {
+                            transform: translate(-45%, -12%);
+                        }
+                    }
+                    &:hover {
+                        transform: translateY(-12%);
                     }
                 }
                 p {
@@ -72,43 +85,134 @@
                 text-align: left;
                 line-height: 1.625;
             }
-        }
-    }
-    .buttons-wrapper {
-        display: flex;
-        flex-direction: row;
-        gap: 1.25rem;
-        margin-top: 2rem;
-        button {
-            font-size: 20px;
-            font-weight: 500;
-            padding: 1rem 3rem;
-            background-color: black;
-            color: #FFF;
-            outline: none;
-            border: none;
-            border: 1px solid var(--green);
-            border-radius: 50px;
-            cursor: pointer;
-            will-change: transform;
-            transition: .25s ease;
-            &:hover {
-                background-color: var(--green);
-                color: var(--black);
-                transform: translateY(-3px);
+            .buttons-wrapper {
+                display: flex;
+                flex-direction: row;
+                gap: 1.25rem;
+                margin-top: 2rem;
+                button {
+                    font-size: 20px;
+                    font-weight: 500;
+                    padding: 1rem 3rem;
+                    background-color: black;
+                    color: #FFF;
+                    outline: none;
+                    border: none;
+                    border: 1px solid var(--green);
+                    border-radius: 50px;
+                    cursor: pointer;
+                    will-change: transform;
+                    transition: .25s ease;
+                    &:hover {
+                        background-color: var(--green);
+                        color: var(--black);
+                        transform: translateY(-3px);
+                    }
+                    &:nth-of-type(2) {
+                        border: 1px solid var(--carbon);
+                        background-color: var(--carbon);
+                        color: var(--black);
+                        &:hover {
+                            background-color: var(--white);
+                        }
+                    }
+                }
             }
-            &:nth-of-type(2) {
-                border: 1px solid var(--carbon);
-                background-color: var(--carbon);
-                color: var(--black);
+        }
+        .cards_wrapper {
+            .card {
+                position: absolute;
+                //width: 325px;
+                //height: 175px;
+                width: 22.5vw;
+                height: auto;
+                aspect-ratio: 2.35/1;
+                border-radius: 18px;
+                background-color: rgba(252, 252, 252, 1);
+                border: 1px solid rgb(50, 50, 50);
+                backdrop-filter: blur(10px);
+                top: 50%;
+                right: 2.5vw;
+                transform: translate(0%, -25%) skew(-45deg, 10deg);
+                transition-delay: 0.03s;
+                transition: .275s ease;
                 &:hover {
-                    background-color: var(--white);
+                    border-color: rgb(85, 85, 85);
+                    transform: translate(0%, calc(-26.75%)) skew(-45deg, 10deg);
+                }
+                &:nth-of-type(2) {
+                    background-color: rgba(11, 11, 11, 0.8);
+                    backdrop-filter: blur(7.5px);
+                    transform: translate(0%, -50%) skew(-45deg, 10deg);
+                    .logo_icon,
+                    .logo,
+                    .owner,
+                    .visa_icon {
+                        color: var(--white);
+                    }
+                    &:hover {
+                        background-color: rgba(1, 1, 1, 1);
+                        transform: translate(0%, calc(-51.75%)) skew(-45deg, 10deg);
+                    }
+                }
+                &:nth-of-type(3) {
+                    background-color: rgba(0, 255, 0, 0.3);
+                    transform: translate(0%, -75%) skew(-45deg, 10deg);
+                    .logo_icon,
+                    .logo,
+                    .owner,
+                    .visa_icon {
+                        color: var(--white);
+                    }
+                    &:hover {
+                        transition: .325s ease;
+                        background-color: rgba(0, 135, 0, 1);
+                        transform: translate(0%, calc(-80%)) skew(-45deg, 10deg);
+                    }
+                }
+                .logo {
+                    font-family: "Montserrat", sans-serif;
+                    position: absolute;
+                    left: 14%;
+                    top: 10%;
+                    transform: translate(-50%, -50%);
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: var(--black);
+                    letter-spacing: -0.025em;
+                    user-select: none;
+                }
+                .owner {
+                    font-family: "Montserrat", sans-serif;
+                    position: absolute;
+                    left: 17.5%;
+                    bottom: -2%;
+                    transform: translate(-50%, -50%);
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: var(--black);
+                    letter-spacing: -0.01em;
+                    user-select: none;
+                }
+                .visa_icon {
+                    font-size: 3rem;
+                    position: absolute;
+                    right: 5%;
+                    bottom: -2.5%;
+                    color: var(--black);
+                }
+                .logo_icon {
+                    color: var(--black);
+                    font-size: 5rem;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
                 }
             }
         }
     }
     .we-work {
-        //margin-top: 10vh;
         font-size: 20px;
         font-weight: 500;
         color: var(--carbon);
@@ -117,5 +221,29 @@
         bottom: calc(12.5vh);
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+    .logos_container {
+        position: absolute;
+        bottom: 4vh;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .group {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            p {
+                font-size: 22px;
+                font-weight: 600;
+                color: var(--carbon);
+                border: 1px solid var(--carbon);
+                padding: 0.5rem 1rem;
+                border-radius: 8px;
+            }
+        }
     }
 }

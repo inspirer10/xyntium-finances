@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/header.scss';
 import Image from 'next/image';
 import LightRays from './LightRays';
+import { Icon } from '@iconify/react';
 
 //* https://reactbits.dev/backgrounds/light-rays
 
@@ -12,22 +13,19 @@ function Header() {
                 style={{ width: '100%', height: '100vh', position: 'relative' }}
             >
                 <LightRays
-                    /* raysOrigin='top-center'
-                    raysColor='#9eff9d'
+                    /*
                     raysSpeed={1.5}
-                    lightSpread={0.8}
-                    rayLength={1.2}
-                    followMouse={true}
+                    lightSpread={0.75}
+                    rayLength={1.25}
                     mouseInfluence={0.1}
                     noiseAmount={0.1}
-                    distortion={0.05}
-                    className='custom-rays' */
+                    distortion={0.05}*/
 
                     raysOrigin='top-center'
                     raysColor='#53a253'
-                    raysSpeed={1}
+                    raysSpeed={0.75}
                     lightSpread={0.75}
-                    rayLength={1.25}
+                    rayLength={1}
                     followMouse={true}
                     fadeDistance={1}
                     saturation={0}
@@ -42,22 +40,22 @@ function Header() {
                     <div className='overHeading'>
                         <Image
                             src='/image1.jpg'
-                            height={55}
-                            width={55}
+                            height={50}
+                            width={50}
                             quality={90}
                             alt=''
                         />
                         <Image
                             src='/image2.jpg'
                             height={50}
-                            width={55}
+                            width={50}
                             quality={90}
                             alt=''
                         />
                         <Image
                             src='/image3.jpg'
-                            height={55}
-                            width={55}
+                            height={50}
+                            width={50}
                             quality={90}
                             alt=''
                         />
@@ -77,11 +75,49 @@ function Header() {
                     </div>
                 </div>
 
-                <Image src={'/globe.svg'} height={350} width={350} alt='xd' />
+                <div className='cards_wrapper'>
+                    <div className='card'>
+                        <p className='logo'>Xyntium</p>
+                        <p className='owner'>Tedd Herman</p>
+                        <Icon icon='ri:visa-line' className='visa_icon' />
+                        <Icon
+                            icon='streamline-logos:elastic-x-pack-logo-solid'
+                            className='logo_icon'
+                        />
+                    </div>
+
+                    <div className='card'>
+                        <p className='logo'>Xyntium</p>
+                        <p className='owner'>Ammy Klorix</p>
+                        <Icon icon='ri:visa-line' className='visa_icon' />
+                        <Icon
+                            icon='streamline-logos:elastic-x-pack-logo-solid'
+                            className='logo_icon'
+                        />
+                    </div>
+
+                    <div className='card'>
+                        <p className='logo'>Xyntium</p>
+                        <p className='owner'>John Random</p>
+                        <Icon icon='ri:visa-line' className='visa_icon' />
+                        <Icon
+                            icon='streamline-logos:elastic-x-pack-logo-solid'
+                            className='logo_icon'
+                        />
+                    </div>
+                </div>
             </article>
 
             <p className='we-work'>Partners and collaborations</p>
-            <div></div>
+            <div className='logos_container'>
+                <div className='group'>
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>5</p>
+                </div>
+            </div>
         </header>
     );
 }
