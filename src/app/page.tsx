@@ -8,6 +8,7 @@ import About from './components/About';
 import OurServices from './components/OurServices';
 import Blockchain from './components/Blockchain';
 import Faq from './components/Faq';
+import Blog from './components/Blog';
 
 export default function Home() {
     return (
@@ -20,6 +21,8 @@ export default function Home() {
             <OurServices />
             <Blockchain />
             <ChooseYourCard />
+
+            <Blog />
 
             <Faq />
 

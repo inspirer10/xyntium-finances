@@ -66,7 +66,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 5rem;
+            margin-top: 7.5vh;
             flex-direction: row;
             gap: 5%;
             article {
@@ -98,14 +98,18 @@
                         font-weight: 500;
                         letter-spacing: -0.025em;
                         margin-bottom: 2.75rem;
-                        color: rgb(125, 125, 125);
+                        color: rgb(105, 105, 105);
                         user-select: none;
+                        transition: .225s ease;
                     }
                     &:hover {
                         background-color: rgb(24, 24, 24);
                         p {
                             color: var(--white);
                             transform: translateX(7px);
+                        }
+                        span {
+                            color: var(--green);
                         }
                     }
                     &:active,
@@ -140,7 +144,7 @@
                         border-radius: 18px;
                         box-shadow: 0 0 16px var(--black-card-glow);
                         opacity: 0;
-                        transition: 0.275s ease;
+                        transition: 0.4s ease;
                         will-change: transform, opacity;
                         &.active {
                             opacity: 1;
@@ -185,7 +189,8 @@
         }
     }
     .book_call_wrapper {
-        margin-top: 7.5rem;
+        width: 90%;
+        margin: 7.5rem auto 0;
         padding: 1.375rem 1.5rem;
         padding-left: 1.75rem;
         border: 1px solid rgba(255, 255, 255, 0.1);
