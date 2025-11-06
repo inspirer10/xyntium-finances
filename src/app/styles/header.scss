@@ -30,8 +30,9 @@
                     height: 50px;
                     width: 50px;
                     border: 2px solid var(--green);
-                    transition: transform .325s ease;
                     z-index: 5;
+                    cursor: pointer;
+                    transition: transform .425s ease;
                     &:nth-of-type(2) {
                         z-index: 10;
                         transform: translateX(-22.5%);
@@ -110,10 +111,10 @@
                     }
                     &:nth-of-type(2) {
                         border: 1px solid var(--carbon);
-                        background-color: var(--carbon);
+                        background-color: var(--white);
                         color: var(--black);
                         &:hover {
-                            background-color: var(--white);
+                            background-color: var(--carbon);
                         }
                     }
                 }
