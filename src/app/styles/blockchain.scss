@@ -59,10 +59,10 @@
             //gap: 2.5vw;
             width: 87.5%;
             .card {
-                width: 550px;
-                height: 325px;
+                min-width: 550px;
+                min-height: 325px;
                 border-radius: 24px;
-                border: 1px solid rgb(200, 200, 200);
+                border: 1px solid rgba(200, 200, 200, 0.4);
                 display: flex;
                 align-items: flex-end;
                 padding: 1rem 0.75rem;
@@ -70,6 +70,16 @@
                 background-color: var(--white);
                 backdrop-filter: blur(5px);
                 position: relative;
+                transition: background-color .225s ease, color .225s ease;
+                .currency_icon {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translate(-50%, 25%);
+                    font-size: 2.25rem;
+                    color: inherit;
+                    transition: .225s ease;
+                }
                 .logo {
                     position: absolute;
                     left: 12.5%;
@@ -78,7 +88,6 @@
                     font-family: "Montserrat", sans-serif;
                     font-size: 24px;
                     font-weight: 700;
-                    color: var(--black);
                     letter-spacing: -0.04em;
                     line-height: 1;
                 }
@@ -87,24 +96,24 @@
                     font-size: 16px;
                     font-weight: 600;
                     line-height: 1.1;
-                    color: var(--black);
                     letter-spacing: -0.04em;
                     width: 40%;
                 }
                 .visa_icon {
-                    font-size: 4.25rem;
                     position: absolute;
                     right: 1rem;
                     bottom: -0.25rem;
-                    color: var(--black);
+                    font-size: 4.25rem;
+                    color: inherit;
                 }
                 .logo_icon {
-                    color: var(--black);
-                    font-size: 7rem;
                     position: absolute;
                     top: 50%;
                     left: 50%;
                     transform: translate(-50%, -50%);
+                    font-size: 7rem;
+                    color: inherit;
+                    transition: .225s ease;
                 }
             }
             aside {
@@ -137,20 +146,24 @@
                         justify-content: center;
                         border-radius: 50%;
                         aspect-ratio: 1 / 1;
+                        box-shadow: none;
                         cursor: pointer;
                         transition-delay: 0.025s;
-                        transition: transform 0.275s ease;
+                        transition: 0.25s ease;
                         &:hover {
                             transform: translateY(-2px);
                             .icon {
                                 transform: scale(1.06);
                             }
                         }
+                        &.active {
+                            box-shadow: 0 0 0 2px var(--green);
+                        }
                         .icon {
                             color: #FFF;
                             font-size: 2.75rem;
                             will-change: transform;
-                            transition: transform 0.3s ease;
+                            transition: 0.25s ease;
                         }
                     }
                 }
@@ -192,12 +205,12 @@
                     will-change: transform;
                     cursor: pointer;
                     transition-delay: 0.025s;
-                    transition: .22s ease;
+                    transition: .225s ease;
                     .icon {
                         font-size: 20px;
                         color: var(--lime);
                         transition-delay: 0.025s;
-                        transition: .22s ease;
+                        transition: .225s ease;
                     }
                     &:hover {
                         color: var(--white);
