@@ -38,8 +38,7 @@ function BlogCard({
                         alt={title}
                         width={600}
                         height={420}
-                        sizes='(max-width: 768px) 100vw, 33vw'
-                        priority={false}
+                        //sizes='(max-width: 768px) 100vw, 33vw'
                     />
 
                     <Icon

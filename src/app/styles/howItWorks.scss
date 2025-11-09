@@ -228,11 +228,16 @@
             text-wrap: nowrap;
             background-color: var(--white);
             color: var(--black);
+            cursor: pointer;
+            will-change: transform;
             transition-delay: 0.025s;
             transition: .225s ease;
-            cursor: pointer;
             &:hover {
                 background-color: var(--green);
+            }
+            &:active {
+                transition: .1s ease;
+                transform: scale(0.975);
             }
         }
     }

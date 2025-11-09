@@ -95,15 +95,20 @@
         padding: 0.75rem 1.5rem;
         background-color: var(--green);
         text-wrap: nowrap;
-        transition-delay: 0.025s;
-        transition: .25s ease;
         cursor: pointer;
+        will-change: transform;
+        transition-delay: 0.025s;
+        transition: .225s ease;
         &:hover {
             background-color: var(--white);
         }
         &.scrolled {
             transition: .4s ease;
             border-radius: 50px;
+        }
+        &:active {
+            transition: .1s ease;
+            transform: scale(0.975);
         }
     }
 }

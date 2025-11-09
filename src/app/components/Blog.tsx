@@ -2,7 +2,18 @@ import React from 'react';
 import '../styles/blog.scss';
 import BlogCard from './BlogCard';
 
-const blogPosts = [
+interface BlogPost {
+    id: number;
+    href: string;
+    image: string;
+    title: string;
+    description: string;
+    author: string;
+    date: string;
+    authorAvatar: string;
+}
+
+const blogPosts: BlogPost[] = [
     {
         id: 1,
         href: '/blog/web3-business',
@@ -11,7 +22,7 @@ const blogPosts = [
         description:
             'Explore how decentralization is reshaping how digital businesses are built and operated.',
         author: 'Jordan Valez',
-        date: 'May 10, 2025',
+        date: 'January 14, 2025',
         authorAvatar: '/image1.jpg',
     },
     {
@@ -21,8 +32,8 @@ const blogPosts = [
         title: 'Accepting Crypto Payments',
         description:
             'Why crypto is becoming a real option for businesses – and how to get started.',
-        author: 'Henrik Hog',
-        date: 'May 10, 2025',
+        author: 'Tiffany Young',
+        date: 'March 3, 2025',
         authorAvatar: '/image2.jpg',
     },
     {
@@ -33,7 +44,7 @@ const blogPosts = [
         description:
             'How wallets and decentralized IDs are changing how users log in and own their data.',
         author: 'Sophia Mason',
-        date: 'May 10, 2025',
+        date: 'February 22, 2025',
         authorAvatar: '/image3.jpg',
     },
     {
@@ -44,8 +55,8 @@ const blogPosts = [
         description:
             'Apps like Ledgerfy offer faster, simpler ways to manage money – no bank needed.',
         author: 'Alejandro Corja',
-        date: 'May 10, 2025',
-        authorAvatar: '/image3.jpg',
+        date: 'April 7, 2025',
+        authorAvatar: '/person4.jpg',
     },
     {
         id: 5,
@@ -54,9 +65,9 @@ const blogPosts = [
         title: 'What Are DAOs and Tokens?',
         description:
             'Learn how communities are building and owning projects together with Web3 tools.',
-        author: 'Tiffany Young',
-        date: 'May 10, 2025',
-        authorAvatar: '/image2.jpg',
+        author: 'Henrik Schmidt',
+        date: 'May 18, 2025',
+        authorAvatar: '/person5.jpg',
     },
     {
         id: 6,
@@ -66,10 +77,11 @@ const blogPosts = [
         description:
             'How freelancers and global workers are using crypto to build borderless careers.',
         author: 'Hank Reirden',
-        date: 'May 12, 2024',
-        authorAvatar: '/image1.jpg',
+        date: 'December 9, 2024',
+        authorAvatar: '/person6.jpg',
     },
 ];
+
 function Blog() {
     return (
         <section className='blog_section'>
