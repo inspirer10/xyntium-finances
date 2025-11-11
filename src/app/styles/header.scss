@@ -221,7 +221,7 @@
         position: absolute;
         bottom: calc(12.5vh);
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, 0%);
     }
     .logos_container {
         position: absolute;
@@ -246,5 +246,63 @@
                 border-radius: 8px;
             }
         }
+    }
+    .partners__slider {
+        width: 70%;
+        margin: 0 auto;
+        overflow: hidden;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -25%);
+        .partners__track {
+            display: inline-block;
+            animation: 14s slides infinite linear;
+        }
+        .logo-img {
+            width: 160px;
+            height: 80px;
+            object-fit: contain;
+            margin: 0 2.5rem;
+            filter: grayscale(100%);
+            transition: filter .2s ease;
+            z-index: 1;
+            &:hover {
+                filter: grayscale(0%);
+            }
+        }
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            content: '';
+            width: 12.5%;
+            height: 100%;
+            z-index: 1000;
+            pointer-events: none !important;
+        }
+        &::before {
+            left: -5%;
+            background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(11, 11, 11));
+        }
+        &::after {
+            right: -5%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(11, 11, 11));
+        }
+        &:hover {
+            .partners__track {
+                animation-play-state: paused;
+            }
+        }
+    }
+}
+
+@keyframes slides {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }

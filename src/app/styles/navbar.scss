@@ -29,13 +29,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
+        gap: 6px;
         font-size: 24px;
         font-weight: 800;
         color: var(--white);
         cursor: pointer;
         transition: .2s ease-out;
         .icon {
+            color: var(--green);
             transition: .2s ease-out;
         }
         &.scrolled {

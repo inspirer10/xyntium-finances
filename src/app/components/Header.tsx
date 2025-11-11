@@ -6,6 +6,15 @@ import { Icon } from '@iconify/react';
 
 //* https://reactbits.dev/backgrounds/light-rays
 
+const logos = [
+    '/logos/logo1.png',
+    '/logos/logo2.png',
+    '/logos/logo3.png',
+    '/logos/logo4.png',
+    '/logos/logo5.png',
+    '/logos/logo6.png',
+];
+
 function Header() {
     return (
         <header className='introduction'>
@@ -109,13 +118,31 @@ function Header() {
             </article>
 
             <p className='we-work'>Partners and collaborations</p>
-            <div className='logos_container'>
-                <div className='group'>
-                    <p>1</p>
-                    <p>2</p>
-                    <p>3</p>
-                    <p>4</p>
-                    <p>5</p>
+            <div className='partners__slider'>
+                <div className='partners__track'>
+                    {logos.map((logo, index) => (
+                        <Image
+                            className='logo-img'
+                            key={index}
+                            src={`${logo}`}
+                            width={140}
+                            height={80}
+                            alt={`Logo ${index + 1}`}
+                        />
+                    ))}
+                </div>
+
+                <div className='partners__track' aria-hidden='true'>
+                    {logos.map((logo, index) => (
+                        <Image
+                            className='logo-img'
+                            key={index}
+                            src={`${logo}`}
+                            width={140}
+                            height={80}
+                            alt={`Logo ${index + 1}`}
+                        />
+                    ))}
                 </div>
             </div>
         </header>
