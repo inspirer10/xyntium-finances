@@ -127,7 +127,7 @@
                 //height: 175px;
                 width: 22.5vw;
                 height: auto;
-                aspect-ratio: 2.35/1;
+                aspect-ratio: 2.25/1;
                 border-radius: 18px;
                 background-color: rgba(252, 252, 252, 1);
                 border: 1px solid rgb(50, 50, 50);
@@ -304,5 +304,29 @@
     }
     to {
         transform: translateX(-100%);
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .introduction {
+        article {
+            .text-wrapper {
+                h1 {
+                    font-size: 4.5rem;
+                    width: 70%;
+                }
+                .subheading {
+                    width: 47.5%;
+                }
+            }
+            .cards_wrapper {
+                .card {
+                    width: 27.5vw;
+                }
+            }
+        }
+        .partners__slider {
+            width: 80%;
+        }
     }
 }

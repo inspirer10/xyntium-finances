@@ -1,7 +1,7 @@
 .ourServices_section {
     width: 90%;
     margin: 0 auto;
-    padding: 15vh 0 2.5vh;
+    padding: 12.5vh 0 2.5vh;
     h2,
     h3 {
         font-family: "Montserrat", sans-serif;
@@ -97,6 +97,15 @@
                 transition-delay: 0.025s;
                 transition: .325s ease;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .ourServices_section {
+        width: 100%;
+        .cards_wrapper {
+            width: 65%;
         }
     }
 }

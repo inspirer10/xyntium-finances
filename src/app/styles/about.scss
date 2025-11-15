@@ -161,3 +161,32 @@
         }
     }
 }
+
+@media screen and (max-width: 1550px) {
+    .about_section {
+        padding-bottom: 15vh;
+        header {
+            gap: 3.75vw;
+            .about_paragraph {
+                font-size: 26px;
+            }
+        }
+        main {
+            .stats_container {
+                margin-top: 5vh;
+                .cards_wrapper {
+                    width: 62.5%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .about_section header {
+        gap: 3.75vw;
+        .about_paragraph {
+            font-size: 26px;
+        }
+    }
+}

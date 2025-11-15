@@ -183,3 +183,12 @@
         translate: -100%;
     }
 }
+
+@media screen and (max-width: 1550px) {
+    .chooseCard_section {
+        width: 100%;
+        .cards_carousel {
+            width: 75%;
+        }
+    }
+}

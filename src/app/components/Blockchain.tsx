@@ -15,7 +15,7 @@ const currenciesData: CurrencyData[] = [
     {
         id: 1,
         backgroundColor: '#f7931a',
-        textColor: '#663300',
+        textColor: '#643200',
         icon: 'token:btc',
     },
     {
@@ -27,13 +27,15 @@ const currenciesData: CurrencyData[] = [
     {
         id: 3,
         backgroundColor: '#429f59',
-        textColor: '#a8e6c1',
+        //textColor: '#a8e6c1',
+        textColor: '#dfffec',
         icon: 'token:usdt',
     },
     {
         id: 4,
         backgroundColor: '#627eea',
-        textColor: '#c5d9ff',
+        //textColor: '#c5d9ff',
+        textColor: '#e2ecff',
         icon: 'token:eth',
     },
     {
@@ -45,43 +47,43 @@ const currenciesData: CurrencyData[] = [
     {
         id: 6,
         backgroundColor: '#f0b90b',
-        textColor: '#8c6600',
+        textColor: '#654a00',
         icon: 'token:bnb',
     },
     {
         id: 7,
         backgroundColor: '#e91e63',
-        textColor: '#ff99cc',
+        textColor: '#ffcce5',
         icon: 'token:dot',
     },
     {
         id: 8,
         backgroundColor: '#224681',
-        textColor: '#6b9fd9',
+        textColor: '#7ebbff',
         icon: 'token:ltc',
     },
     {
         id: 9,
         backgroundColor: '#66b0a8',
-        textColor: '#2d5a52',
+        textColor: '#1f3e39',
         icon: 'token:xtz',
     },
     {
         id: 10,
         backgroundColor: '#5469d4',
-        textColor: '#a8c5ff',
+        textColor: '#b8d0ff',
         icon: 'token:sol',
     },
     {
         id: 11,
         backgroundColor: '#c89b3c',
-        textColor: '#5a4a1a',
+        textColor: '#433713',
         icon: 'token:euroe',
     },
     {
         id: 12,
         backgroundColor: '#2e2e2e',
-        textColor: '#808080',
+        textColor: '#969696',
         icon: 'token:stellar',
     },
 ];

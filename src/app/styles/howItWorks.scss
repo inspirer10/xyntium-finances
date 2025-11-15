@@ -1,7 +1,7 @@
 .howItWorks_section {
     width: 90%;
     margin: 0 auto;
-    padding: 15vh 0 12.5vh;
+    padding: 12.5vh 0 12.5vh;
     h2,
     h3 {
         text-align: center;
@@ -240,5 +240,11 @@
                 transform: scale(0.975);
             }
         }
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    .howItWorks_section {
+        width: 97.5%;
     }
 }

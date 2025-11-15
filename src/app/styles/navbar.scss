@@ -113,3 +113,17 @@
         }
     }
 }
+
+@media screen and (max-width: 1550px) {
+    .navbar {
+        &.scrolled {
+            width: 67.5%;
+        }
+        ul {
+            gap: 1.75rem;
+            &.scrolled {
+                gap: 0.25rem;
+            }
+        }
+    }
+}

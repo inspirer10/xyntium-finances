@@ -163,3 +163,17 @@
         }
     }
 }
+
+@media screen and (max-width: 1550px) {
+    .blog_section {
+        width: 90%;
+        .articles_container {
+            .blogCard {
+                width: 47.5%;
+                .blogCard_header .blogCard_desc {
+                    max-width: 80%;
+                }
+            }
+        }
+    }
+}
